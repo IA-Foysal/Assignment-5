@@ -226,7 +226,7 @@
             </div>
             
         </div>
-        <div class="history w-[25%] border-2 border-red-800 bg-zinc-300 h-[400px] md:h-[700px] p-1">
+        <div class="history w-[25%]  bg-zinc-300 h-[400px] md:h-[700px] p-1">
     <div class="md:flex grid-cols-2 justify-around bg-white mb-1">
         <p class="font-bold">Call History</p>
         <button id="clear-history" class="bg-green-500 md:rounded-xl w-[100%] md:w-[100px]">Clear</button>
@@ -279,7 +279,7 @@ document.querySelectorAll(".btn-copy").forEach(btn => {
 
         navigator.clipboard.writeText(number).then(()=>{
             alert(`${number} copied!`);
-            copyCounter++; // counter 1 করে বাড়াও
+            copyCounter++; // counter 1 
             document.getElementById("copy-count").innerText = copyCounter; // header update
         });
     });
