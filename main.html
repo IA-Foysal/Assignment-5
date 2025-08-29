@@ -15,17 +15,17 @@
             <img src="assets/logo.png" class="w-[50px] h-[50px]" alt="">
             <h1 class="font-bold text-green-900 text-[.8rem]">Emergency <br> Service</h1>
         </div>
-        <div class="banner-info text-center h-[30px] w-[30%] justify-between gap-4 flex">
-            <div class="flex bg-green-300 rounded-2xl w-[60px] items-center justify-center gap-1">
-                <p id="likeCount">0</p>
-                <img src="assets/heart.png" class="w-6 h-6" alt="">
+        <div class="banner-info text-center h-[30px] w-[40%] justify-between gap-4 flex">
+            <div class="flex bg-green-300 rounded w-[80px] items-center justify-center gap-1">
+                <p id="likeCount" class="text-[12px]">0</p>
+                <img src="assets/heart.png" class="w-[20px] h-[20px]" alt="">
             </div>
-            <div class="flex bg-green-300 rounded-2xl w-[60px] items-center justify-center gap-1">
-                <p id="coin-count">100</p>
-                <img src="assets/coin.png" class="w-[24px] h-[24px]" alt="">
+            <div class="flex bg-green-300 rounded w-[100px] items-center justify-center gap-1">
+                <p id="coin-count" class="text-[12px]">100</p>
+                <img src="assets/coin.png" class="w-[20px] h-[20px]" alt="">
             </div>
-            <div class="text-white bg-green-600 rounded-2xl w-[60px] flex items-center justify-center">
-                <p id="copy-count">0 </p> <span>Copyed</span>
+            <div class="text-white bg-green-600 rounded w-[60px] flex items-center justify-center">
+                <p id="copy-count" class="w-[80px]">0 </p> <span class="text-[12px] font-bold">Copyed</span>
             </div>
         </div>
     </header>
@@ -226,6 +226,7 @@
             </div>
             
         </div>
+        <!-- history section -->
         <div class="history w-[25%]  bg-zinc-300 h-[400px] md:h-[700px] p-1">
     <div class="md:flex grid-cols-2 justify-around bg-white mb-1">
         <p class="font-bold">Call History</p>
@@ -256,11 +257,17 @@ document.querySelectorAll(".btn-call").forEach(btn => {
             // Add to history
             const time = new Date().toLocaleString();
             const li = document.createElement("li");
-            li.textContent = `${name} - ${time}`;
+            
             document.getElementById("history-list").prepend(li);
+            li.textContent = `${name} - ${time}`;
+            li.style.backgroundColor = "white ";
+            li.style.padding = "5px";
+            li.style.marginBottom = "5px";
+            li.style.borderRadius = "5px";
         } else {
             alert("Not enough coins to make a call!");
         }
+        
     });
 });
 
